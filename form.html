@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form ve input</title>
+</head>
+<body>
+    <form action="">  <!-- form oluşturmak için form etiketi kullanılır. 
+                       action özelliği ile de inputlardaki değerlerin 
+                       belirlediğimiz dosyaya gönderilmesi sağlanır.
+                       Örneğin; action="process.php" yazarsak bu 
+                       formdaki tüm bilgiler bu dosyaya gönderilmiş olacaktır.-->
+        <!-- HTML5 input-->
+        <label for="isim">İsim</label> <!-- label etiketi ile hem İsim yazısına tıkladığımızda 
+                                   hem de input kısmına tıkladığımızda kullanıcıdan input almaya 
+                                   yönlendirme sağlanır. for kısmında yazdığımız bilgi ise 
+                                   input etiketi içinde tanımlanan id bilgisidir.  -->
+        <br>  <!-- br etiketi ile bir satır aşağı geçilir. -->
+        <input type="text" id="isim" name="name"><!--kullanıcının input girebilmesi için input etiketi kullanılır.
+                            type özelliği ile de input'un hangi türde olacağı belirlenir.
+                            name özelliği ile de gönderilen dosya ile iletişim sağlanır. -->
+        <br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- forma submit butonu ekleyelim: -->
+        <input type="submit" value="Gönder"> 
+        <!--type olarak submit, ve value olarak da Gönder yazdık. 
+        Value ile butonun üzerinde yazacak olan yazıyı belirledik. -->
+
+        <!--*******************************************************************************************-->
+
+        <!-- submit butonunu button etiketi ile de oluşturabiliriz: 
+        <button type="submit">Gönder</button> -->
+
+        <!--*******************************************************************************************-->
+
+        <!-- yazdıklarımızı silmek için reset butonu da ekleyebiliriz: -->
+        <input type="reset" value="Sıfırla">
+        <!-- eğer aynı işlemi button etiketi ile yaparsak: 
+        <button type="reset">Sıfırla</button> -->
+
+        <!--*******************************************************************************************-->
+        <br>
+        <!-- eğer text değil de email göndermek istiyorsak: -->
+        <label for="e-mail">Email</label><br>
+        <input type="email" id="e-mail" name="email">
+        <br>
+        
+        <!--*******************************************************************************************-->
+
+        <!-- bir parola alanı oluşturalım: -->
+        <label for="password">Şifre</label><br>
+        <input type="password" id="password" name="password">
+        <br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- peki tarih girmek için bir alan oluşturmak istersek: -->
+        <label for="date">Tarih</label><br>
+        <input type="date" id="date" name="date">
+        <br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- peki ya bir seçenek sunmamız gerekirse? :-->
+        Gender <br>
+        Male
+        <input type="radio" name="gender" value="male">
+        <!-- radio type'ında seçeneklerden sadece bir tanesi seçilebilir.
+        Bu yüzden de name'lerinin aynı olması gerekir.-->
+        Female
+        <input type="radio" name="gender" value="female">
+        Other
+        <input type="radio" name="gender" value="other"><br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- eğer birden fazla seçim yapılabilmesini istiyorsak: -->
+        Hobbies <br>
+        Tech <input type="checkbox" name="tech" id="tech" > 
+        Music <input type="checkbox" name="music" id="music"><br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- kullanıcı tarafından seçilmeli bir kısım olmasını istersek: -->
+        Degree <br>
+        <select name="degree" id="degree"> <!--select etiketleri içerisine seçenekler yazılır. -->
+            <option value="bachelor">Lisans</option>
+            <option value="msc">Yüksek Lisans</option>
+            <option value="phd">Doktora</option>
+        </select><br><br>
+
+        <!--*******************************************************************************************-->
+
+        <!-- kullanıcıların metin girebilmesi için bir alan oluşturmak istersek: -->
+        Metin Alanı: <br>
+        <textarea name="message" id="msg" cols="30" rows="10" placeholder="Mesajınız:"></textarea>
+        <!-- geçici olarak metin kutusu üzerine yazı yazmak isterseniz 
+            placeholder özelliğini kullanabilirsiniz.-->
+
+
+
+
+        
+
+
+    </form>
+    
+</body>
+</html>
